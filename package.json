@@ -1,0 +1,24 @@
+{
+  "name": "pollard-rho-backend",
+  "version": "1.0.0",
+  "description": "Windows 本地可运行的 Pollard rho 有界整数因子搜索后端（TypeScript + Node.js + SQLite，仅 API 与 CLI）",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "rho": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "tsc -p tsconfig.test.json && node --test \"dist-test/test/*.test.js\"",
+    "demo": "tsc -p tsconfig.json && node dist/cli.js demo"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.6.0"
+  }
+}
